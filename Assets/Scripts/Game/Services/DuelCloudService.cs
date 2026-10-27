@@ -210,7 +210,8 @@ namespace TTTXO.Game.Services
             await WriteLock.WaitAsync();
             try
             {
-                await CloudSaveService.Instance.Data.Player.DeleteAsync(new HashSet<string> { KeyFor(matchId) });
+                await CloudSaveService.Instance.Data.Player.DeleteAsync(
+                    KeyFor(matchId), new Unity.Services.CloudSave.Models.Data.Player.DeleteOptions());
                 await RemoveFromIndexAsync(matchId);
                 return true;
             }

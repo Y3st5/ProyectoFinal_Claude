@@ -106,6 +106,11 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
+# The Cloud Code module needs its .csproj/.sln to be built and deployed: the rules above (meant for the
+# files Unity regenerates) must not swallow them.
+!CloudCode~/**/*.csproj
+!CloudCode~/**/*.sln
+
 # Cloud Code module build artifacts (.NET)
 CloudCode~/**/bin/
 CloudCode~/**/obj/
