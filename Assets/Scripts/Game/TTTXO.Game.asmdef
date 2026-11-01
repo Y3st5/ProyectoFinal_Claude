@@ -6,6 +6,8 @@
         "Unity.Services.Core",
         "Unity.Services.Authentication",
         "Unity.Services.CloudSave",
+        "Unity.Services.CloudCode",
+        "Unity.Services.CloudCode.Subscriptions",
         "Unity.Localization",
         "Unity.ResourceManager"
     ],

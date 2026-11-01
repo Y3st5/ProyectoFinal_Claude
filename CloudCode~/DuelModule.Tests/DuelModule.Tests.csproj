@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Runs the unit tests of the online duel outside Unity, so they can run in CI or from a terminal in
+    seconds. It compiles the SAME sources the Unity client and the Cloud Code module compile
+    (Assets/Scripts/Core) and the SAME test files Unity's Test Runner runs. Nothing is copied.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\Assets\Scripts\Core\**\*.cs" Link="Core\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Compile Include="..\..\Assets\Scripts\Tests\Core\DuelOnlineEngineTests.cs" Link="Tests\DuelOnlineEngineTests.cs" />
+    <Compile Include="..\..\Assets\Scripts\Tests\Core\DuelResolverTests.cs" Link="Tests\DuelResolverTests.cs" />
+    <Compile Include="..\..\Assets\Scripts\Tests\Core\RpsMatchTests.cs" Link="Tests\RpsMatchTests.cs" />
+  </ItemGroup>
+
+</Project>

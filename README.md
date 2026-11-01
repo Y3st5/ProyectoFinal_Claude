@@ -79,7 +79,13 @@ El documento (`DuelStateDto`) es el contrato JSON exacto que se guarda en Cloud 
 - `DuelCloudStore` escribe primero en local y después empuja a Cloud Save en segundo plano: **el juego nunca espera a la red**.
 - `DuelCloudService` hace login anónimo con **Unity Authentication** y guarda `duelIndex` + `duelMatch_<id>` con **Cloud Save**.
 - Si el proyecto no está vinculado a un Unity Project ID o no hay red, todo sigue funcionando en local y solo aparece un warning en la consola.
-- Alcance actual: Cloud Save **Player Data** (cada cuenta ve sus documentos). El PvP entre dos cuentas sobre el mismo documento requiere Cloud Save game data o un módulo de Cloud Code; es la siguiente fase.
+- Alcance actual: Cloud Save **Player Data** (cada cuenta ve sus documentos). Es una **caché del jugador**, no la fuente de verdad: esa clase de acceso (Default) la puede escribir el propio jugador.
+
+### Duelo online entre dos cuentas (autoridad en Cloud Code)
+
+El PvP real lo decide un módulo de Cloud Code, `CloudCode~/DuelModule/`, que **ejecuta las reglas de este proyecto** (`DuelResolver`, `DuelTimeout`, `DuelMoveCodec`: se compilan dentro del módulo, no se copian). El servidor guarda las secuencias ocultas, resuelve la ronda cuando llegan las dos, mide "reclamar victoria" con su propio reloj y avisa al rival con un **mensaje push de Cloud Code**; el cliente se suscribe y, por si un push se pierde, también sondea. Mensajes, diagrama de una ronda y despliegue están en [`CloudCode~/DuelModule/README.md`](CloudCode~/DuelModule/README.md).
+
+Estado: el módulo compila y tiene pruebas; el servicio de cliente (`IDuelOnlineService`) existe, pero **`DuelHub`/`DuelCombat` todavía no lo usan** y el módulo no está desplegado. Conectar la UI es la siguiente tarea del equipo.
 
 ## Estructura
 
@@ -120,7 +126,14 @@ Unity.exe -batchmode -nographics -quit ^
 
 ## Tests
 
-EditMode (reglas, IA, serie, navegación, duelo y serialización):
+Las reglas del duelo online (autoridad, secuencias ocultas, reintentos, reclamar victoria) se prueban **sin Unity**, en segundos:
+
+```
+cd CloudCode~/DuelModule.Tests
+dotnet test
+```
+
+EditMode en Unity (reglas, IA, serie, navegación, duelo, serialización y reglas del duelo online):
 
 ```
 Unity.exe -batchmode -nographics -projectPath "<ruta>" ^
