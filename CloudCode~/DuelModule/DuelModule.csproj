@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Cloud Code C# modules run on .NET up to 9; they cannot reference UnityEngine. -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>DuelModule</RootNamespace>
+    <AssemblyName>DuelModule</AssemblyName>
+    <!-- RpsMatchController.cs (shared with Unity) uses nullable annotations outside a nullable context. -->
+    <NoWarn>$(NoWarn);CS8632</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Com.Unity.Services.CloudCode.Core" Version="0.0.9" />
+    <PackageReference Include="Com.Unity.Services.CloudCode.Apis" Version="0.0.27" />
+    <!-- ILogger&lt;T&gt;: Cloud Code injects it into the function class and adds playerId/projectId to every log line. -->
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
+  </ItemGroup>
+
+  <!--
+    The match rules and the message contract are NOT duplicated here: the module compiles the
+    very same files the Unity client uses (TTTXO.Core is pure C#, no UnityEngine). Tests are excluded.
+  -->
+  <ItemGroup>
+    <Compile Include="..\..\Assets\Scripts\Core\**\*.cs" Link="Core\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
