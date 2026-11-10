@@ -1,7 +1,7 @@
 ﻿<Solution>
+  <Project Path="TTTXO.Game.csproj" />
   <Project Path="TTTXO.Core.csproj" />
   <Project Path="TTTXO.Game.Tests.csproj" />
-  <Project Path="TTTXO.Game.csproj" />
   <Project Path="TTTXO.Game.Editor.csproj" />
   <Project Path="TTTXO.Core.Tests.csproj" />
   <Project Path="TTTXO.Game.PlayModeTests.csproj" />

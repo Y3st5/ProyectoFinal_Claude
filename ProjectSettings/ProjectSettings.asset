@@ -793,11 +793,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 0c32608f-4ee0-4754-8856-ead42a831684
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Guerrero, Maga y Asesino
-  organizationId: 
+  projectName: TTTXO
+  organizationId: unity_01aa32ad9130e6439f31
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
