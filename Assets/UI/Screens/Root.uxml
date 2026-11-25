@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" editor-extension-mode="False">
     <Style src="/Assets/UI/Styles/main.uss" />
+    <Style src="/Assets/UI/Styles/theme.uss" />
     <ui:VisualElement name="app-root" class="app-root">
 
         <ui:VisualElement name="screen-store" class="screen screen-store" style="display: none;">
@@ -51,21 +52,33 @@
                 <ui:VisualElement class="coin-badge-group" style="display: none;" />
             </ui:VisualElement>
             <ui:VisualElement class="home-content">
-                <ui:Label name="rps-menu-title-label" class="screen-title" />
-                <ui:Label name="rps-menu-subtitle-label" class="rps-menu-subtitle" />
-                <ui:Button name="rps-play-button" class="primary-button primary-button--large" />
+                <ui:VisualElement class="menu-headline">
+                    <ui:VisualElement class="menu-emblem" picking-mode="Ignore">
+                        <ui:VisualElement class="menu-emblem-glow" picking-mode="Ignore" />
+                        <ui:VisualElement class="menu-emblem-icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="menu-headline-text">
+                        <ui:Label name="rps-menu-title-label" class="screen-title menu-title" />
+                        <ui:VisualElement class="menu-title-rule" picking-mode="Ignore" />
+                        <ui:Label name="rps-menu-subtitle-label" class="rps-menu-subtitle" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement class="menu-cta-wrap">
+                    <ui:VisualElement class="menu-cta-glow" picking-mode="Ignore" />
+                    <ui:Button name="rps-play-button" class="primary-button primary-button--large" />
+                </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement class="home-secondary-row">
                 <ui:VisualElement name="rps-menu-duels-button" class="secondary-nav-button">
-                    <ui:Label name="rps-menu-duels-icon-label" class="secondary-nav-icon" />
+                    <ui:Label name="rps-menu-duels-icon-label" class="secondary-nav-icon secondary-nav-icon--duels" />
                     <ui:Label name="rps-menu-duels-label" class="secondary-nav-label" />
                 </ui:VisualElement>
                 <ui:VisualElement name="rps-menu-store-button" class="secondary-nav-button">
-                    <ui:Label name="rps-menu-store-icon-label" class="secondary-nav-icon" />
+                    <ui:Label name="rps-menu-store-icon-label" class="secondary-nav-icon secondary-nav-icon--store" />
                     <ui:Label name="rps-menu-store-label" class="secondary-nav-label" />
                 </ui:VisualElement>
                 <ui:VisualElement name="rps-menu-settings-button" class="secondary-nav-button">
-                    <ui:Label name="rps-menu-settings-icon-label" class="secondary-nav-icon" />
+                    <ui:Label name="rps-menu-settings-icon-label" class="secondary-nav-icon secondary-nav-icon--settings" />
                     <ui:Label name="rps-menu-settings-label" class="secondary-nav-label" />
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -78,14 +91,24 @@
             </ui:VisualElement>
             <ui:VisualElement name="rps-mode-card-list" class="card-column">
                 <ui:VisualElement name="rps-mode-single-card" class="mode-card">
-                    <ui:VisualElement name="rps-mode-single-icon" class="card-icon card-icon--image card-icon--single-player" />
-                    <ui:Label name="rps-mode-single-title-label" class="card-title" />
-                    <ui:Label name="rps-mode-single-description-label" class="card-description" />
+                    <ui:VisualElement class="mode-card-icon-wrap" picking-mode="Ignore">
+                        <ui:VisualElement name="rps-mode-single-icon" class="card-icon card-icon--image card-icon--single-player" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="mode-card-text">
+                        <ui:Label name="rps-mode-single-title-label" class="card-title" />
+                        <ui:Label name="rps-mode-single-description-label" class="card-description" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="mode-card-chevron" picking-mode="Ignore" />
                 </ui:VisualElement>
                 <ui:VisualElement name="rps-mode-local-card" class="mode-card">
-                    <ui:VisualElement name="rps-mode-local-icon" class="card-icon card-icon--image card-icon--local-2p" />
-                    <ui:Label name="rps-mode-local-title-label" class="card-title" />
-                    <ui:Label name="rps-mode-local-description-label" class="card-description" />
+                    <ui:VisualElement class="mode-card-icon-wrap" picking-mode="Ignore">
+                        <ui:VisualElement name="rps-mode-local-icon" class="card-icon card-icon--image card-icon--local-2p" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="mode-card-text">
+                        <ui:Label name="rps-mode-local-title-label" class="card-title" />
+                        <ui:Label name="rps-mode-local-description-label" class="card-description" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="mode-card-chevron" picking-mode="Ignore" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
@@ -100,15 +123,27 @@
             <ui:Label name="charselect-score-label" class="charselect-score" />
             <ui:VisualElement name="charselect-character-list" class="charselect-character-row">
                 <ui:VisualElement name="charselect-caballero" class="charselect-character-card">
-                    <ui:VisualElement name="charselect-caballero-sprite" class="charselect-character-sprite" />
+                    <ui:VisualElement class="charselect-card-aura" picking-mode="Ignore" />
+                    <ui:VisualElement class="charselect-card-frame" picking-mode="Ignore">
+                        <ui:VisualElement name="charselect-caballero-sprite" class="charselect-character-sprite" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="charselect-card-divider" picking-mode="Ignore" />
                     <ui:Label name="charselect-caballero-name" class="charselect-character-name" />
                 </ui:VisualElement>
                 <ui:VisualElement name="charselect-maga" class="charselect-character-card">
-                    <ui:VisualElement name="charselect-maga-sprite" class="charselect-character-sprite" />
+                    <ui:VisualElement class="charselect-card-aura" picking-mode="Ignore" />
+                    <ui:VisualElement class="charselect-card-frame" picking-mode="Ignore">
+                        <ui:VisualElement name="charselect-maga-sprite" class="charselect-character-sprite" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="charselect-card-divider" picking-mode="Ignore" />
                     <ui:Label name="charselect-maga-name" class="charselect-character-name" />
                 </ui:VisualElement>
                 <ui:VisualElement name="charselect-asesino" class="charselect-character-card">
-                    <ui:VisualElement name="charselect-asesino-sprite" class="charselect-character-sprite" />
+                    <ui:VisualElement class="charselect-card-aura" picking-mode="Ignore" />
+                    <ui:VisualElement class="charselect-card-frame" picking-mode="Ignore">
+                        <ui:VisualElement name="charselect-asesino-sprite" class="charselect-character-sprite" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="charselect-card-divider" picking-mode="Ignore" />
                     <ui:Label name="charselect-asesino-name" class="charselect-character-name" />
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -118,12 +153,19 @@
             <ui:Label name="vs-round-label" class="vs-round-label" />
             <ui:Label name="vs-score-label" class="vs-score-label" />
             <ui:VisualElement class="vs-stage">
-                <ui:VisualElement name="vs-left" class="vs-side">
-                    <ui:VisualElement name="vs-left-sprite" class="vs-sprite" />
+                <ui:VisualElement name="vs-left" class="vs-side vs-side--left">
+                    <ui:VisualElement class="vs-aura" picking-mode="Ignore" />
+                    <ui:VisualElement class="vs-portrait">
+                        <ui:VisualElement name="vs-left-sprite" class="vs-sprite" />
+                    </ui:VisualElement>
                     <ui:Label name="vs-left-name" class="vs-name" />
                 </ui:VisualElement>
-                <ui:VisualElement name="vs-right" class="vs-side">
-                    <ui:VisualElement name="vs-right-sprite" class="vs-sprite" />
+                <ui:Label name="vs-vs-badge" class="vs-badge" text="VS" picking-mode="Ignore" />
+                <ui:VisualElement name="vs-right" class="vs-side vs-side--right">
+                    <ui:VisualElement class="vs-aura" picking-mode="Ignore" />
+                    <ui:VisualElement class="vs-portrait">
+                        <ui:VisualElement name="vs-right-sprite" class="vs-sprite" />
+                    </ui:VisualElement>
                     <ui:Label name="vs-right-name" class="vs-name" />
                 </ui:VisualElement>
                 <ui:Label name="vs-draw-label" class="vs-draw-label" text="EMPATE" style="display: none;" />
@@ -140,6 +182,7 @@
                 <ui:Button name="duel-hub-back-button" class="icon-button back-button" />
                 <ui:Label name="duel-hub-title-label" class="screen-header-title" />
             </ui:VisualElement>
+            <ui:VisualElement class="duel-empty-icon" picking-mode="Ignore" />
             <ui:Label name="duel-hub-empty-label" class="duel-empty-label" />
             <ui:ScrollView name="duel-hub-list" mode="Vertical" class="duel-hub-list" />
             <ui:Button name="duel-hub-new-button" class="primary-button" />
@@ -152,57 +195,67 @@
                 <ui:Label name="duel-round-label" class="screen-header-title" />
             </ui:VisualElement>
 
-            <ui:VisualElement class="duel-stage">
-                <ui:VisualElement class="duel-side">
-                    <ui:VisualElement name="duel-left-sprite" class="duel-sprite" />
-                    <ui:Label name="duel-left-name" class="duel-name" />
-                    <ui:VisualElement class="duel-hp-track">
-                        <ui:VisualElement name="duel-left-hp-fill" class="duel-hp-fill" />
+            <ui:ScrollView class="duel-scroll" mode="Vertical">
+                <ui:VisualElement class="duel-stage">
+                    <ui:VisualElement class="duel-side duel-side--you">
+                        <ui:VisualElement class="duel-sprite-placeholder" picking-mode="Ignore" />
+                        <ui:VisualElement name="duel-left-sprite" class="duel-sprite" />
+                        <ui:Label name="duel-left-name" class="duel-name" />
+                        <ui:VisualElement class="duel-hp-track">
+                            <ui:VisualElement name="duel-left-hp-fill" class="duel-hp-fill" />
+                            <ui:VisualElement class="duel-hp-tick" style="left: 25%;" picking-mode="Ignore" />
+                            <ui:VisualElement class="duel-hp-tick" style="left: 50%;" picking-mode="Ignore" />
+                            <ui:VisualElement class="duel-hp-tick" style="left: 75%;" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                        <ui:Label name="duel-left-hp-label" class="duel-hp-label" />
                     </ui:VisualElement>
-                    <ui:Label name="duel-left-hp-label" class="duel-hp-label" />
-                </ui:VisualElement>
-                <ui:Label name="duel-vs-label" class="duel-vs-label" text="VS" />
-                <ui:VisualElement class="duel-side">
-                    <ui:VisualElement name="duel-right-sprite" class="duel-sprite" />
-                    <ui:Label name="duel-right-name" class="duel-name" />
-                    <ui:VisualElement class="duel-hp-track">
-                        <ui:VisualElement name="duel-right-hp-fill" class="duel-hp-fill duel-hp-fill--rival" />
+                    <ui:Label name="duel-vs-label" class="duel-vs-label" text="VS" />
+                    <ui:VisualElement class="duel-side duel-side--rival">
+                        <ui:VisualElement class="duel-sprite-placeholder" picking-mode="Ignore" />
+                        <ui:VisualElement name="duel-right-sprite" class="duel-sprite" />
+                        <ui:Label name="duel-right-name" class="duel-name" />
+                        <ui:VisualElement class="duel-hp-track">
+                            <ui:VisualElement name="duel-right-hp-fill" class="duel-hp-fill duel-hp-fill--rival" />
+                            <ui:VisualElement class="duel-hp-tick" style="left: 25%;" picking-mode="Ignore" />
+                            <ui:VisualElement class="duel-hp-tick" style="left: 50%;" picking-mode="Ignore" />
+                            <ui:VisualElement class="duel-hp-tick" style="left: 75%;" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                        <ui:Label name="duel-right-hp-label" class="duel-hp-label" />
+                        <ui:VisualElement class="duel-slot-row duel-slot-row--rival">
+                            <ui:Label name="duel-rival-slot-0" class="duel-slot duel-slot--rival" />
+                            <ui:Label name="duel-rival-slot-1" class="duel-slot duel-slot--rival" />
+                            <ui:Label name="duel-rival-slot-2" class="duel-slot duel-slot--rival" />
+                        </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:Label name="duel-right-hp-label" class="duel-hp-label" />
-                    <ui:VisualElement class="duel-slot-row duel-slot-row--rival">
-                        <ui:Label name="duel-rival-slot-0" class="duel-slot duel-slot--rival" />
-                        <ui:Label name="duel-rival-slot-1" class="duel-slot duel-slot--rival" />
-                        <ui:Label name="duel-rival-slot-2" class="duel-slot duel-slot--rival" />
+                </ui:VisualElement>
+
+                <ui:Label name="duel-status-label" class="duel-status" />
+                <ui:Label name="duel-countdown-label" class="duel-countdown" />
+
+                <ui:VisualElement name="duel-slot-row" class="duel-slot-row">
+                    <ui:Button name="duel-slot-0" class="duel-slot" />
+                    <ui:Button name="duel-slot-1" class="duel-slot" />
+                    <ui:Button name="duel-slot-2" class="duel-slot" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="duel-picker-row" class="duel-picker-row">
+                    <ui:VisualElement name="duel-pick-guerrero" class="duel-pick">
+                        <ui:Label name="duel-pick-guerrero-icon" class="duel-pick-icon" />
+                        <ui:Label name="duel-pick-guerrero-label" class="duel-pick-label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="duel-pick-maga" class="duel-pick">
+                        <ui:Label name="duel-pick-maga-icon" class="duel-pick-icon" />
+                        <ui:Label name="duel-pick-maga-label" class="duel-pick-label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="duel-pick-asesino" class="duel-pick">
+                        <ui:Label name="duel-pick-asesino-icon" class="duel-pick-icon" />
+                        <ui:Label name="duel-pick-asesino-label" class="duel-pick-label" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-            </ui:VisualElement>
 
-            <ui:Label name="duel-status-label" class="duel-status" />
-            <ui:Label name="duel-countdown-label" class="duel-countdown" />
-
-            <ui:VisualElement name="duel-slot-row" class="duel-slot-row">
-                <ui:Button name="duel-slot-0" class="duel-slot" />
-                <ui:Button name="duel-slot-1" class="duel-slot" />
-                <ui:Button name="duel-slot-2" class="duel-slot" />
-            </ui:VisualElement>
-
-            <ui:VisualElement name="duel-picker-row" class="duel-picker-row">
-                <ui:VisualElement name="duel-pick-guerrero" class="duel-pick">
-                    <ui:Label name="duel-pick-guerrero-icon" class="duel-pick-icon" />
-                    <ui:Label name="duel-pick-guerrero-label" class="duel-pick-label" />
-                </ui:VisualElement>
-                <ui:VisualElement name="duel-pick-maga" class="duel-pick">
-                    <ui:Label name="duel-pick-maga-icon" class="duel-pick-icon" />
-                    <ui:Label name="duel-pick-maga-label" class="duel-pick-label" />
-                </ui:VisualElement>
-                <ui:VisualElement name="duel-pick-asesino" class="duel-pick">
-                    <ui:Label name="duel-pick-asesino-icon" class="duel-pick-icon" />
-                    <ui:Label name="duel-pick-asesino-label" class="duel-pick-label" />
-                </ui:VisualElement>
-            </ui:VisualElement>
-
-            <ui:Button name="duel-confirm-button" class="primary-button" />
-            <ui:Button name="duel-claim-button" class="danger-button" style="display: none;" />
+                <ui:Button name="duel-confirm-button" class="primary-button duel-confirm" />
+                <ui:Button name="duel-claim-button" class="danger-button" style="display: none;" />
+            </ui:ScrollView>
 
             <ui:VisualElement name="duel-result-overlay" class="overlay" style="display: none;">
                 <ui:VisualElement class="duel-result-panel">

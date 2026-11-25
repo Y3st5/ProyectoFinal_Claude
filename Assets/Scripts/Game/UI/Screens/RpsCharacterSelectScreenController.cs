@@ -197,6 +197,10 @@ namespace TTTXO.Game.UI.Screens
                     ? UiText.RpsCharacterSelect.PlayerOneTurn
                     : UiText.RpsCharacterSelect.SingleTurn;
 
+            // In single player this label repeats the header title ("Choose your fighter"). Keep it
+            // only for local 2P, where it is the thing that tells the players whose turn it is.
+            _turnLabel.style.display = isTwoPlayer ? DisplayStyle.Flex : DisplayStyle.None;
+
             var oneLabel = isTwoPlayer ? UiText.RpsGame.Player1Label : UiText.RpsGame.YouLabel;
             var twoLabel = isTwoPlayer ? UiText.RpsGame.Player2Label : UiText.RpsGame.AiLabel;
             _scoreLabel.text = string.Format(

@@ -50,6 +50,13 @@ El PvP real lo decide `CloudCode~/DuelModule/` (ver su `README.md`: mensajes, di
 - El `.gitignore` excluye `*.csproj` y `*.sln` **con excepción de `CloudCode~/`**: ahí sí se versionan, porque sin ellos el módulo no se puede compilar ni desplegar. No subas `bin/` ni `obj/`.
 - La pantalla de `DuelHub`/`DuelCombat` aún **no** usa `IDuelOnlineService`: conectarla es la siguiente tarea (ver la propuesta del seguimiento).
 
+## Estilo de UI
+
+- `Assets/UI/Styles/theme.uss` es la capa visual (tokens, superficies, botones, campos y componentes) y se carga **después** de `main.uss`. `main.uss` conserva la estructura y las reglas heredadas; para cambiar el aspecto, hazlo en `theme.uss`.
+- La profundidad se construye con texturas generadas en `Assets/Art/Generated/brand-ui`: `ui_backdrop`, `ui_glow`, `ui_sheen` y los iconos `ui_icon_*`. UI Toolkit no tiene gradientes CSS ni `box-shadow`.
+- UI Toolkit 6.3 **no** admite `gap`, `line-height` ni animaciones por USS: usa márgenes, `transition` para el feedback y revisa la consola al editar la hoja (un import con warnings puede dejar reglas sin aplicar).
+- La bienvenida de la UI pasa por `ScreenRouter`, que refresca el texto de todas las pantallas cuando la tabla de localización termina de cargar; no vuelvas a fijar textos estáticos solo en el constructor de un controlador.
+
 ## Arte y animaciones
 
 - No reintroduzcas `Animator`, `SpriteRenderer` ni los objetos de preview en `Rps.unity`.

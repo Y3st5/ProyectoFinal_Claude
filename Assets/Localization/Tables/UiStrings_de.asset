@@ -509,7 +509,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -690,6 +690,152 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: UNENTSCHIEDEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Duelle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Duelle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: "Kurzes Zeitlimit (2 Min.) f\xFCr Demos und Bewertung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Aktive Duelle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: "Du hast keine aktiven Duelle. Starte ein neues und komm zur\xFCck,
+      wann du willst."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: "Neues Duell (\xDCbung)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: 'Demo: stummer Gegner (Zeitlimit)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: Du bist dran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: Warten auf Gegner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: Beendet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Runde {0} \xB7 Du {1} LP \xB7 Gegner {2} LP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: "\xDCbungsgegner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Stummer Gegner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Duell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Runde {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: "Du bist dran: f\xFClle die drei Felder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: "Z\xFCge gesendet. Dein Gegner antwortet, wenn du dieses Duell das
+      n\xE4chste Mal \xF6ffnest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Anspruch in {0}:{1:00} \xB7 Inaktivit\xE4t {2} Min."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Sieg beanspruchen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: "Z\xFCge senden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: "F\xFClle die drei Felder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Aufeinandertreffen der Runde {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: Sieg!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: Niederlage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Unentschieden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Weiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: "Zur\xFCck zum Hub"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Gleiche Klasse \xB7 kein Schaden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} gewinnt \xB7 {1} Schaden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Sieg durch K.o.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: Sieg durch Aufgabe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: 'Unentschieden: Rundenlimit erreicht'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Dein Gegner gewinnt \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: K.o.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: Aufgabe
     m_Metadata:
       m_Items: []
   references:

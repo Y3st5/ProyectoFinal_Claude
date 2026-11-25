@@ -683,6 +683,150 @@ MonoBehaviour:
     m_Key: RpsGame/DrawLabel
     m_Metadata:
       m_Items: []
+  - m_Id: 45069336763138048
+    m_Key: RpsMenu/DuelsLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Key: Settings/DuelSectionLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Key: Settings/DuelDemoTimeoutLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Key: Duel/HubTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Key: Duel/HubEmpty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Key: Duel/NewDuelButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Key: Duel/IdleDemoButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Key: Duel/CardYourTurn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Key: Duel/CardWaitingRival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Key: Duel/CardFinished
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Key: Duel/CardSummaryFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Key: Duel/PracticeRivalName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Key: Duel/IdleRivalName
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Key: Duel/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Key: Duel/RoundFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Key: Duel/YourTurn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Key: Duel/WaitingRival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Key: Duel/WaitingCountdownFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Key: Duel/ClaimButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Key: Duel/ConfirmButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Key: Duel/ConfirmIncomplete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Key: Duel/ResultRoundTitleFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Key: Duel/ResultWin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Key: Duel/ResultLoss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Key: Duel/ResultDraw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Key: Duel/ResultContinue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Key: Duel/ResultBackToHub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Key: Duel/ClashFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Key: Duel/ClashDraw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Key: Duel/ClashDamageFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Key: Duel/WinByKo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Key: Duel/WinByAbandon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Key: Duel/DrawByLimit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Key: Duel/LossReasonFormat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Key: Duel/ReasonKo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Key: Duel/ReasonAbandon
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

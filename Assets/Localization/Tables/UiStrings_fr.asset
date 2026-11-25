@@ -506,7 +506,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -687,6 +687,152 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: "\xC9GALIT\xC9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Duels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Duels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: "D\xE9lai court (2 min) pour les d\xE9mos et l'\xE9valuation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Duels en cours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: Vous n'avez aucun duel en cours. Lancez-en un et revenez quand vous
+      voulez.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: "Nouveau duel (entra\xEEnement)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: "D\xE9mo : rival silencieux (d\xE9lai)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: "\xC0 vous"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: En attente du rival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: "Termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Manche {0} \xB7 Vous {1} PV \xB7 Rival {2} PV"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: "Rival d'entra\xEEnement"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Rival silencieux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Duel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Manche {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: "\xC0 vous : remplissez les trois cases"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: "Coups envoy\xE9s. Votre rival r\xE9pondra \xE0 la prochaine ouverture
+      de ce duel."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "R\xE9clamation dans {0}:{1:00} \xB7 inactivit\xE9 {2} min"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Revendiquer la victoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: Envoyer les coups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: Remplissez les trois cases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Chocs de la manche {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: Victoire !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: "D\xE9faite"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: "\xC9galit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: Retour au hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "M\xEAme classe \xB7 aucun d\xE9g\xE2t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} gagne \xB7 {1} d\xE9g\xE2ts"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Victoire par K.-O.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: Victoire par abandon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: "\xC9galit\xE9 : limite de manches atteinte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Votre rival gagne \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: K.-O.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: abandon
     m_Metadata:
       m_Items: []
   references:

@@ -506,7 +506,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -687,6 +687,151 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: PAREGGIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Duelli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Duelli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: Tempo limite breve (2 min) per demo e valutazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Duelli attivi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: Non hai duelli attivi. Iniziane uno e torna quando vuoi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: Nuovo duello (pratica)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: 'Demo: rivale silenzioso (timeout)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: Tocca a te
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: In attesa del rivale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: Concluso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Manche {0} \xB7 Tu {1} PV \xB7 Rivale {2} PV"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: Rivale di pratica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Rivale silenzioso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Duello
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Manche {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: 'Tocca a te: riempi le tre caselle'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: "Mosse inviate. Il rivale risponder\xE0 la prossima volta che apri
+      questo duello."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Riscatto tra {0}:{1:00} \xB7 inattivit\xE0 {2} min"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Rivendica la vittoria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: Invia mosse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: Riempi le tre caselle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Scontri della manche {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: Vittoria!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: Sconfitta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Pareggio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Continua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: Torna al Hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Stessa classe \xB7 nessun danno"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} vince \xB7 {1} danni"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Vittoria per KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: Vittoria per abbandono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: 'Pareggio: limite di manche raggiunto'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Il rivale vince \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: abbandono
     m_Metadata:
       m_Items: []
   references:

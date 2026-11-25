@@ -6,6 +6,7 @@ using TTTXO.Game.UI.Screens;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UIElements;
 
 namespace TTTXO.Game.UI
@@ -152,10 +153,37 @@ namespace TTTXO.Game.UI
             // on the Settings screen.
             LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
 
+            // Localization boots asynchronously; the controllers above are constructed immediately and
+            // may have captured English fallbacks. Re-run their copy once the tables are really ready.
+            try
+            {
+                if (LocalizationSettings.HasSettings)
+                {
+                    var initialization = LocalizationSettings.InitializationOperation;
+                    if (initialization.IsDone)
+                    {
+                        RefreshAllLocalizedText();
+                    }
+                    else
+                    {
+                        initialization.Completed += OnLocalizationInitialized;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"ScreenRouter: could not observe localization initialization - {ex.Message}");
+            }
+
             // The scene was serialized with the old enum value (Splash/Home) before this build.
             // Falling back to the menu keeps an out-of-date scene playable without a re-save.
             var start = ScreenElementNames.ContainsKey(_startScreen) ? _startScreen : ScreenId.RpsMenu;
             Show(start);
+
+            // The table assets load lazily on the first lookup: the first GetLocalizedString call
+            // returns the fallback and only then kicks off the load. Preload the selected locale's
+            // table and refresh once it is available.
+            RefreshWhenTableReady();
         }
 
         private void OnDestroy()
@@ -164,6 +192,54 @@ namespace TTTXO.Game.UI
         }
 
         private void OnSelectedLocaleChanged(Locale _)
+        {
+            RefreshAllLocalizedText();
+            RefreshWhenTableReady();
+        }
+
+        /// <summary>
+        /// Re-applies the copy once the selected locale's string table has actually loaded. The first
+        /// synchronous lookup only starts that load and returns the fallback, so a locale switch (or
+        /// the initial boot) would otherwise keep the old/English text until the next navigation.
+        /// </summary>
+        private void RefreshWhenTableReady()
+        {
+            if (!_initialized || !LocalizationSettings.HasSettings)
+            {
+                return;
+            }
+
+            var locale = LocalizationSettings.SelectedLocale;
+            if (locale == null)
+            {
+                return;
+            }
+
+            try
+            {
+                var table = LocalizationSettings.StringDatabase.GetTableAsync(UiText.TableName, locale);
+                table.Completed += _ =>
+                {
+                    if (_initialized)
+                    {
+                        RefreshAllLocalizedText();
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"ScreenRouter: could not preload localization table - {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Re-applies every controller's static UiText copy. Called on a locale change and once when
+        /// localization finishes booting: controllers are constructed during the first frame, often
+        /// before the tables are ready, and UiText deliberately returns the English fallback while
+        /// initializing. Without this second pass the menu title, duel buttons and similar static
+        /// labels stayed in English for the whole session even though the selected locale was Spanish.
+        /// </summary>
+        private void RefreshAllLocalizedText()
         {
             // Defensive: a broken screen refresh must never take down the rest of the app or block
             // navigation, so each controller is refreshed independently.
@@ -180,6 +256,17 @@ namespace TTTXO.Game.UI
             }
 
             ConfirmDialog?.RefreshLocalizedText();
+        }
+
+        private void OnLocalizationInitialized(AsyncOperationHandle<LocalizationSettings> _)
+        {
+            if (!_initialized)
+            {
+                return;
+            }
+
+            RefreshAllLocalizedText();
+            RefreshWhenTableReady();
         }
 
         /// <summary>Hides the current screen (if any) and shows the requested one.</summary>
@@ -211,6 +298,9 @@ namespace TTTXO.Game.UI
             if (_controllers.TryGetValue(screenId, out var nextController))
             {
                 nextController.OnShow();
+                // Cheap and idempotent: guarantees the screen's static copy is in the selected locale
+                // even when it was constructed before the string table finished loading.
+                nextController.RefreshLocalizedText();
             }
         }
 

@@ -505,7 +505,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -686,6 +686,150 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: SERI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Duel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Duel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: Batas waktu singkat (2 menit) untuk demo dan evaluasi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Duel aktif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: Kamu tidak punya duel aktif. Mulai yang baru dan kembali kapan saja.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: Duel baru (latihan)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: 'Demo: lawan diam (batas waktu)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: Giliranmu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: Menunggu lawan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: Selesai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Ronde {0} \xB7 Kamu {1} HP \xB7 Lawan {2} HP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: Lawan latihan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Lawan diam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Duel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Ronde {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: 'Giliranmu: isi ketiga slot'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: Jurus terkirim. Lawan akan menjawab saat kamu membuka duel ini lagi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Klaim terbuka dalam {0}:{1:00} \xB7 batas {2} menit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Klaim kemenangan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: Kirim jurus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: Isi ketiga slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Bentrokan ronde {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: Menang!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: Kalah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Seri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Lanjutkan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: Kembali ke Hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Kelas sama \xB7 tanpa damage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} menang \xB7 {1} damage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Menang KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: Menang karena lawan pergi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: 'Seri: batas ronde tercapai'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Lawanmu menang \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: lawan pergi
     m_Metadata:
       m_Items: []
   references:

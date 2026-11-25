@@ -26,7 +26,7 @@ namespace TTTXO.Game.UI
     public static class UiText
     {
         /// <summary>Name of the Unity Localization String Table Collection created by LocalizationSetup.</summary>
-        private const string TableName = "UiStrings";
+        public const string TableName = "UiStrings";
 
         public static class Common
         {

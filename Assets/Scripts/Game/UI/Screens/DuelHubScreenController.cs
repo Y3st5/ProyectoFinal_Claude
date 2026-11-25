@@ -17,6 +17,7 @@ namespace TTTXO.Game.UI.Screens
         private readonly ScreenRouter _router;
         private readonly DuelHub _hub;
 
+        private readonly VisualElement _emptyIcon;
         private readonly Label _emptyLabel;
         private readonly ScrollView _list;
         private readonly Button _newButton;
@@ -28,6 +29,7 @@ namespace TTTXO.Game.UI.Screens
             _router = router ?? throw new ArgumentNullException(nameof(router));
             _hub = hub ?? throw new ArgumentNullException(nameof(hub));
 
+            _emptyIcon = _root.Q<VisualElement>(className: "duel-empty-icon");
             _emptyLabel = _root.Q<Label>("duel-hub-empty-label");
             _list = _root.Q<ScrollView>("duel-hub-list");
             _newButton = _root.Q<Button>("duel-hub-new-button");
@@ -72,8 +74,10 @@ namespace TTTXO.Game.UI.Screens
             _list.Clear();
 
             var duels = _hub.ActiveDuels;
-            _emptyLabel.style.display = duels.Count == 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            _list.style.display = duels.Count == 0 ? DisplayStyle.None : DisplayStyle.Flex;
+            bool showEmpty = duels.Count == 0;
+            _emptyIcon.style.display = showEmpty ? DisplayStyle.Flex : DisplayStyle.None;
+            _emptyLabel.style.display = showEmpty ? DisplayStyle.Flex : DisplayStyle.None;
+            _list.style.display = showEmpty ? DisplayStyle.None : DisplayStyle.Flex;
 
             foreach (var duel in duels)
             {
@@ -120,6 +124,11 @@ namespace TTTXO.Game.UI.Screens
 
             card.Add(text);
             card.Add(state);
+
+            var chevron = new VisualElement();
+            chevron.AddToClassList("duel-card-chevron");
+            chevron.pickingMode = PickingMode.Ignore;
+            card.Add(chevron);
 
             var matchId = duel.match_id;
             card.RegisterCallback<ClickEvent>(_ => OpenDuel(matchId));

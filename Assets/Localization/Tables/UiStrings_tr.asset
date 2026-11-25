@@ -508,7 +508,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -690,6 +690,152 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: BERABERE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: "D\xFCellolar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: "D\xFCellolar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: "Demo ve de\u011Ferlendirme i\xE7in k\u0131sa s\xFCre (2 dk)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: "Aktif d\xFCellolar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: "Aktif d\xFCellon yok. Yeni bir tane ba\u015Flat ve istedi\u011Fin
+      zaman geri d\xF6n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: "Yeni d\xFCello (al\u0131\u015Ft\u0131rma)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: "Demo: sessiz rakip (zaman a\u015F\u0131m\u0131)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: "S\u0131ra sende"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: Rakip bekleniyor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: Bitti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Tur {0} \xB7 Sen {1} HP \xB7 Rakip {2} HP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: "Al\u0131\u015Ft\u0131rma rakibi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Sessiz rakip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: "D\xFCello"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Tur {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: "S\u0131ra sende: \xFC\xE7 alan\u0131 doldur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: "Hamleler g\xF6nderildi. Rakibin bu d\xFCelloyu bir sonraki a\xE7\u0131\u015F\u0131nda
+      cevap verecek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Talep {0}:{1:00} sonra \xB7 hareketsizlik {2} dk"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Zaferi talep et
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: "Hamleleri g\xF6nder"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: "\xDC\xE7 alan\u0131 doldur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: "Tur {0} \xE7arp\u0131\u015Fmalar\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: Zafer!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: Yenilgi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Berabere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Devam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: "Hub'a d\xF6n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Ayn\u0131 s\u0131n\u0131f \xB7 hasar yok"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} kazan\u0131r \xB7 {1} hasar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Nakavtla zafer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: "Terk eden rakibe kar\u015F\u0131 zafer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: "Berabere: tur s\u0131n\u0131r\u0131na ula\u015F\u0131ld\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Rakibin kazan\u0131r \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: Nakavt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: terk edilme
     m_Metadata:
       m_Items: []
   references:

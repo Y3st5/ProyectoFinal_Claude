@@ -508,7 +508,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -689,6 +689,152 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: REMIS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Pojedynki
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Pojedynki
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: "Kr\xF3tki limit czasu (2 min) do dem i oceny"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Aktywne pojedynki
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: "Nie masz aktywnych pojedynk\xF3w. Zacznij nowy i wr\xF3\u0107,
+      kiedy chcesz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: Nowy pojedynek (trening)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: "Demo: milcz\u0105cy rywal (limit czasu)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: Twoja kolej
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: Czekam na rywala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: "Zako\u0144czony"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Runda {0} \xB7 Ty {1} HP \xB7 Rywal {2} HP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: Rywal treningowy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: "Milcz\u0105cy rywal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Pojedynek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Runda {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: "Twoja kolej: wype\u0142nij trzy pola"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: "Ruchy wys\u0142ane. Rywal odpowie przy nast\u0119pnym otwarciu
+      tego pojedynku."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Roszczenie za {0}:{1:00} \xB7 bezczynno\u015B\u0107 {2} min"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: "Zg\u0142o\u015B zwyci\u0119stwo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: "Wy\u015Blij ruchy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: "Wype\u0142nij trzy pola"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Starcia rundy {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: "Zwyci\u0119stwo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: "Pora\u017Cka"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Remis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Kontynuuj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: "Wr\xF3\u0107 do huba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Ta sama klasa \xB7 brak obra\u017Ce\u0144"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} wygrywa \xB7 {1} obra\u017Ce\u0144"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: "Zwyci\u0119stwo przez nokaut"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: "Zwyci\u0119stwo przez porzucenie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: "Remis: osi\u0105gni\u0119to limit rund"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Rywal wygrywa \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: Nokaut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: porzucenie
     m_Metadata:
       m_Items: []
   references:

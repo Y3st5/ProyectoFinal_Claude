@@ -126,6 +126,7 @@ namespace TTTXO.Game.UI.Screens
             _root.Q<Label>("duel-pick-guerrero-icon").text = UiText.Icons.RpsRock;
             _root.Q<Label>("duel-pick-maga-icon").text = UiText.Icons.RpsPaper;
             _root.Q<Label>("duel-pick-asesino-icon").text = UiText.Icons.RpsScissors;
+            ApplyPickArt();
 
             _confirmButton.clicked += OnConfirmClicked;
             _claimButton.clicked += OnClaimClicked;
@@ -191,6 +192,35 @@ namespace TTTXO.Game.UI.Screens
             {
                 ApplyTurnState();
             }
+        }
+
+        /// <summary>
+        /// Replaces the emoji glyphs of the class picker with the idle frame of each fighter. The
+        /// glyphs are cleared only when a frame exists, so a missing database keeps the old fallback.
+        /// </summary>
+        private void ApplyPickArt()
+        {
+            if (_database == null)
+            {
+                return;
+            }
+
+            SetPickArt(_root.Q<Label>("duel-pick-guerrero-icon"), RpsMove.Rock);
+            SetPickArt(_root.Q<Label>("duel-pick-maga-icon"), RpsMove.Paper);
+            SetPickArt(_root.Q<Label>("duel-pick-asesino-icon"), RpsMove.Scissors);
+        }
+
+        private void SetPickArt(Label icon, RpsMove move)
+        {
+            var frames = _database.GetFrames(move);
+            if (icon == null || frames.Idle == null || frames.Idle.Length == 0)
+            {
+                return;
+            }
+
+            icon.text = string.Empty;
+            icon.AddToClassList("duel-pick-icon--art");
+            icon.style.backgroundImage = new StyleBackground(frames.Idle[0]);
         }
 
         // ---- Turn state -------------------------------------------------------------------

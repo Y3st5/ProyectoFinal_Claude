@@ -506,7 +506,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -687,6 +687,152 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: EMPATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Duelos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Duelos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: "Tiempo l\xEDmite corto (2 min) para demos y evaluaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Duelos activos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: No tienes duelos activos. Empieza uno nuevo y vuelve cuando quieras.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: "Nuevo duelo (pr\xE1ctica)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: "Demo: rival inactivo (tiempo l\xEDmite)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: Tu turno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: Esperando rival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: Finalizado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Ronda {0} \xB7 T\xFA {1} PV \xB7 Rival {2} PV"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: "Rival de pr\xE1ctica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Rival inactivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Duelo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Ronda {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: 'Tu turno: completa las 3 ranuras'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: "Jugada enviada. El rival responder\xE1 la pr\xF3xima vez que abras
+      este duelo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Reclamar se habilita en {0}:{1:00} \xB7 ventana de inactividad
+      {2} min"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Reclamar victoria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: Enviar jugada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: Completa las 3 ranuras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Choques de la ronda {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: "\xA1Victoria!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: Derrota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Empate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: Volver al Hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Misma clase \xB7 sin da\xF1o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} gana \xB7 {1} de da\xF1o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Victoria por KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: Victoria por abandono
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: "Empate: se alcanz\xF3 el l\xEDmite de rondas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Tu rival gana \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: abandono
     m_Metadata:
       m_Items: []
   references:

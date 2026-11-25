@@ -343,7 +343,13 @@ namespace TTTXO.Game.Editor
             // --- RPS (Rock-Paper-Scissors scene menu / mode picker / match screen) ---
             // "RPS" stays an untranslated code in every locale, same as the TTT Home secondary-row label.
             ["Home/RpsLabel"] = new[] { "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS" },
-            ["RpsMenu/Title"] = new[] { "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS", "RPS" },
+            ["RpsMenu/Title"] = new[]
+            {
+                "Guerrero, Maga y Asesino", "Guerrero, Maga y Asesino", "Guerrero, Maga y Asesino",
+                "Guerrero, Maga y Asesino", "Guerrero, Maga y Asesino", "Guerrero, Maga y Asesino",
+                "Guerrero, Maga y Asesino", "Guerrero, Maga y Asesino", "Guerrero, Maga y Asesino",
+                "Guerrero, Maga y Asesino",
+            },
             ["RpsMenu/Subtitle"] = new[]
             {
                 "Rock, paper, scissors", "Piedra, papel o tijeras", "Pierre, papier, ciseaux", "Schnick, Schnack, Schnuck",

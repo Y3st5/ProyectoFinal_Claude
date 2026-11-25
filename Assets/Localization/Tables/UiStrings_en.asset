@@ -504,7 +504,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623680
-    m_Localized: RPS
+    m_Localized: Guerrero, Maga y Asesino
     m_Metadata:
       m_Items: []
   - m_Id: 24781258743623681
@@ -685,6 +685,151 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 32699714803593228
     m_Localized: EMPATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336763138048
+    m_Localized: Duels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052608
+    m_Localized: Duels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052609
+    m_Localized: Short timeout (2 min) for demos and evaluation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052610
+    m_Localized: Active duels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052611
+    m_Localized: You have no active duels. Start a new one and come back whenever
+      you want.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052612
+    m_Localized: New duel (practice)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052613
+    m_Localized: 'Demo: silent rival (timeout)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052614
+    m_Localized: Your turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052615
+    m_Localized: Waiting for rival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052616
+    m_Localized: Finished
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052617
+    m_Localized: "Round {0} \xB7 You {1} HP \xB7 Rival {2} HP"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052618
+    m_Localized: Practice rival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052619
+    m_Localized: Silent rival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052620
+    m_Localized: Duel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052621
+    m_Localized: Round {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052622
+    m_Localized: 'Your turn: fill the three slots'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052623
+    m_Localized: Moves sent. Your rival will answer the next time you open this duel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052624
+    m_Localized: "Claim unlocks in {0}:{1:00} \xB7 inactivity window {2} min"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052625
+    m_Localized: Claim victory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052626
+    m_Localized: Send moves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052627
+    m_Localized: Fill the three slots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052628
+    m_Localized: Clashes of round {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052629
+    m_Localized: Victory!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052630
+    m_Localized: Defeat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052631
+    m_Localized: Draw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052632
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052633
+    m_Localized: Back to Hub
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052634
+    m_Localized: '{0} vs {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052635
+    m_Localized: "Same class \xB7 no damage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052636
+    m_Localized: "{0} wins \xB7 {1} damage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052637
+    m_Localized: Victory by KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052638
+    m_Localized: Victory by abandonment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052639
+    m_Localized: 'Draw: round limit reached'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052640
+    m_Localized: "Your rival wins \xB7 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052641
+    m_Localized: KO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45069336826052642
+    m_Localized: abandonment
     m_Metadata:
       m_Items: []
   references:

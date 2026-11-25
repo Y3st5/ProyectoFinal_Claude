@@ -1,0 +1,1621 @@
+/*
+ * Guerrero, Maga y Asesino - visual theme layer.
+ *
+ * Loaded after main.uss. main.uss keeps the structural rules and the legacy screen classes;
+ * this sheet owns the look: palette, depth, typography, button/field skins and the
+ * decorative treatment of each screen.
+ *
+ * Design language: "neon guild" - deep ink surfaces, glass panels with a top sheen,
+ * a teal primary accent, a violet secondary and one warm gold for rewards.
+ * UI Toolkit has no box-shadow or CSS gradients, so depth comes from three ingredients:
+ *   - ui_backdrop.png   (full-screen ink + corner bloom + vignette)
+ *   - ui_sheen.png           (vertical white gradient, only on the primary CTA and HP fills)
+ *   - ui_glow.png       (radial white bloom, tinted per use)
+ * All three live in Assets/Art/Generated/brand-ui.
+ */
+
+:root {
+    /* Palette - names inherited from main.uss keep every legacy rule on-palette. */
+    --color-bg: #05080d;
+    --color-bg-panel: #0e1721;
+    --color-bg-panel-alt: #142130;
+    --color-bg-elevated: #1b2a3a;
+    --color-border: #23384a;
+    --color-text: #eef6fb;
+    --color-text-muted: #8ea3b6;
+    --color-accent: #3ef2cf;
+    --color-accent-dark: #1fc4a5;
+    --color-accent-secondary: #9a7bff;
+    --color-danger: #ff5d6c;
+    --color-danger-dark: #e14456;
+    --color-warning: #ffc45c;
+    --color-soft-currency: #f4c948;
+    --color-hard-currency: #b58cff;
+    --color-win: #46e08a;
+    --color-loss: #ff5d6c;
+    --color-draw: #8ea3b6;
+
+    /* Surfaces and strokes. */
+    --surface-glass: rgba(9, 16, 24, 0.92);
+    --surface-glass-strong: rgba(13, 22, 32, 0.98);
+    --surface-sunken: rgba(5, 10, 16, 0.72);
+    --stroke-soft: rgba(126, 167, 190, 0.18);
+    --stroke-mid: rgba(126, 167, 190, 0.30);
+    --stroke-accent: rgba(62, 242, 207, 0.52);
+    --stroke-violet: rgba(154, 123, 255, 0.50);
+    --ink-on-accent: #04110e;
+
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+    --radius-pill: 999px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Base
+ * ------------------------------------------------------------------------------------------- */
+
+.app-root {
+    background-color: var(--color-bg);
+}
+
+.screen {
+    --content-padding-x: 22;
+    --content-padding-y: 24;
+    background-color: var(--color-bg);
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_backdrop.png");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+/* The menu keeps its illustrated backdrop; everything else uses the ink backdrop above. */
+.screen-rps-menu {
+    background-image: url("/Assets/Art/Generated/brand-ui/menu_background.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Typography
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-title {
+    font-size: 30px;
+    color: var(--color-text);
+    -unity-font-style: bold;
+    letter-spacing: 0.4px;
+}
+
+.section-label {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    -unity-font-style: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Headers
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-header {
+    width: 100%;
+    max-width: 680px;
+    min-height: 46px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--stroke-soft);
+}
+
+.screen-header-title {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    margin-left: 14px;
+    padding-bottom: 0;
+    flex-grow: 1;
+}
+
+.icon-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+    background-color: rgba(20, 33, 48, 0.85);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    color: var(--color-text);
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    padding: 0;
+    transition-property: background-color, border-color, scale;
+    transition-duration: 0.12s;
+}
+
+.icon-button:hover {
+    background-color: rgba(30, 48, 66, 0.95);
+    border-color: var(--stroke-accent);
+    color: var(--color-accent);
+}
+
+.icon-button:active {
+    scale: 0.95 0.95;
+}
+
+.back-button {
+    color: var(--color-accent);
+    font-size: 24px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Buttons
+ * ------------------------------------------------------------------------------------------- */
+
+.primary-button {
+    background-color: var(--color-accent);
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_sheen.png");
+    background-size: 100% 100%;
+    color: var(--ink-on-accent);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius-md);
+    padding: 14px 28px;
+    font-size: 17px;
+    -unity-font-style: bold;
+    letter-spacing: 0.4px;
+    margin: 6px;
+    transition-property: background-color, scale, border-color;
+    transition-duration: 0.12s;
+}
+
+.primary-button:hover {
+    background-color: #66ffe2;
+    border-color: rgba(255, 255, 255, 0.65);
+    scale: 1.02 1.02;
+}
+
+.primary-button:active {
+    scale: 0.97 0.97;
+}
+
+.primary-button:focus {
+    border-color: #ffffff;
+}
+
+.primary-button:disabled {
+    background-color: rgba(20, 33, 48, 0.9);
+    background-image: none;
+    color: var(--color-text-muted);
+    border-color: var(--stroke-soft);
+}
+
+.primary-button--large {
+    min-width: 300px;
+    padding: 20px 54px;
+    font-size: 26px;
+    letter-spacing: 0.8px;
+    border-radius: var(--radius-lg);
+    margin: 0;
+}
+
+.secondary-button {
+    background-color: rgba(20, 33, 48, 0.72);
+    background-size: 100% 100%;
+    color: var(--color-text);
+    border-width: 1px;
+    border-color: var(--stroke-mid);
+    border-radius: var(--radius-md);
+    padding: 12px 22px;
+    font-size: 15px;
+    -unity-font-style: bold;
+    margin: 6px;
+    transition-property: border-color, background-color, scale;
+    transition-duration: 0.12s;
+}
+
+.secondary-button:hover {
+    border-color: var(--stroke-accent);
+    background-color: rgba(28, 46, 62, 0.9);
+}
+
+.secondary-button:active {
+    scale: 0.97 0.97;
+}
+
+.danger-button {
+    background-color: rgba(255, 93, 108, 0.06);
+    color: var(--color-danger);
+    border-width: 1px;
+    border-color: rgba(255, 93, 108, 0.62);
+    border-radius: var(--radius-md);
+    padding: 12px 22px;
+    font-size: 15px;
+    -unity-font-style: bold;
+    letter-spacing: 0.4px;
+    margin: 16px 0 0 0;
+    width: 100%;
+    max-width: 420px;
+    transition-property: background-color, scale;
+    transition-duration: 0.12s;
+}
+
+.danger-button:hover {
+    background-color: rgba(255, 93, 108, 0.16);
+}
+
+.danger-button:active {
+    scale: 0.97 0.97;
+}
+
+.button-row {
+    margin-top: 4px;
+}
+
+.button-row .primary-button {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Cards, chips, tabs
+ * ------------------------------------------------------------------------------------------- */
+
+.card {
+    background-color: var(--surface-glass);
+    background-size: 100% 100%;
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+}
+
+.chip {
+    background-color: rgba(20, 33, 48, 0.8);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    border-radius: var(--radius-pill);
+    padding: 8px 18px;
+    font-size: 13px;
+    color: var(--color-text);
+}
+
+.chip--selected {
+    border-color: var(--stroke-accent);
+    background-color: rgba(62, 242, 207, 0.10);
+    color: var(--color-accent);
+}
+
+.list-item {
+    background-color: var(--surface-glass);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    border-radius: var(--radius-sm);
+}
+
+.list-item:hover {
+    border-color: var(--stroke-accent);
+}
+
+.tab-row {
+    margin-bottom: 16px;
+    max-width: 560px;
+}
+
+.tab-button {
+    background-color: rgba(20, 33, 48, 0.65);
+    color: var(--color-text-muted);
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: var(--radius-pill);
+    padding: 8px 16px;
+    margin: 0 3px;
+    font-size: 13px;
+    -unity-font-style: bold;
+    letter-spacing: 0.4px;
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.12s;
+}
+
+.tab-button:hover {
+    color: var(--color-text);
+    background-color: rgba(28, 46, 62, 0.85);
+}
+
+.tab-button--active {
+    color: var(--color-accent);
+    background-color: rgba(62, 242, 207, 0.10);
+    border-width: 1px;
+    border-color: var(--stroke-accent);
+    border-radius: var(--radius-pill);
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Coin badges
+ * ------------------------------------------------------------------------------------------- */
+
+.header-bar {
+    margin-bottom: 18px;
+}
+
+.coin-badge-group {
+    margin-left: 8px;
+}
+
+.coin-badge {
+    background-color: rgba(14, 23, 33, 0.82);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    border-radius: var(--radius-pill);
+    padding: 4px 12px 4px 8px;
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+.coin-dot {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.coin-badge-value {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+.coin-add-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent);
+    color: var(--ink-on-accent);
+    font-size: 18px;
+    border-width: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Home / main menu
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-rps-menu {
+    --content-padding-x: 22;
+    --content-padding-y: 22;
+}
+
+.screen-rps-menu .screen-title {
+    font-size: 38px;
+    margin-bottom: 0;
+}
+
+.home-content {
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-headline {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.menu-emblem {
+    width: 74px;
+    height: 74px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: rgba(10, 20, 28, 0.55);
+    border-width: 1px;
+    border-color: var(--stroke-accent);
+    background-size: 100% 100%;
+}
+
+.menu-emblem-glow {
+    position: absolute;
+    left: -42px;
+    top: -42px;
+    right: -42px;
+    bottom: -42px;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_glow.png");
+    background-size: 100% 100%;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+    opacity: 0.22;
+}
+
+.menu-emblem-icon {
+    width: 44px;
+    height: 44px;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_duel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+}
+
+.menu-headline-text {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 1;
+}
+
+.menu-title {
+    -unity-text-align: middle-left;
+    white-space: normal;
+}
+
+.menu-title-rule {
+    width: 72px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--color-accent);
+    margin: 8px 0 9px 0;
+}
+
+.rps-menu-subtitle {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    -unity-text-align: middle-left;
+}
+
+.menu-cta-wrap {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-cta-glow {
+    position: absolute;
+    left: -70px;
+    top: -46px;
+    right: -70px;
+    bottom: -46px;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_glow.png");
+    background-size: 100% 100%;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+    opacity: 0.16;
+}
+
+.home-secondary-row {
+    margin-top: 10px;
+}
+
+.secondary-nav-button {
+    width: 142px;
+    padding: 12px 8px 11px 8px;
+    margin: 5px;
+    border-radius: var(--radius-md);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    background-color: rgba(9, 16, 24, 0.95);
+    background-size: 100% 100%;
+    transition-property: border-color, background-color, translate, scale;
+    transition-duration: 0.13s;
+}
+
+.secondary-nav-button:hover {
+    border-color: var(--stroke-accent);
+    background-color: rgba(16, 28, 40, 0.97);
+    translate: 0 -2px;
+}
+
+.secondary-nav-button:active {
+    scale: 0.97 0.97;
+}
+
+.secondary-nav-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    background-color: rgba(62, 242, 207, 0.09);
+    border-width: 1px;
+    border-color: rgba(62, 242, 207, 0.24);
+    background-size: 58%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    color: rgba(0, 0, 0, 0);
+    font-size: 0;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.secondary-nav-icon--duels {
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_duel.png");
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+}
+
+.secondary-nav-icon--store {
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_store.png");
+    -unity-background-image-tint-color: rgb(220, 238, 245);
+}
+
+.secondary-nav-icon--settings {
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_settings.png");
+    -unity-background-image-tint-color: rgb(220, 238, 245);
+}
+
+.secondary-nav-label {
+    font-size: 13px;
+    color: var(--color-text);
+    -unity-font-style: bold;
+    letter-spacing: 0.4px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Mode select
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-rps-mode-select {
+    --content-padding-x: 22;
+    --content-padding-y: 22;
+}
+
+.card-column {
+    max-width: 560px;
+    justify-content: center;
+}
+
+.mode-card {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 104px;
+    flex-shrink: 0;
+    padding: 14px 18px;
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    border-radius: var(--radius-lg);
+    background-color: rgba(9, 16, 24, 0.92);
+    background-size: 100% 100%;
+    transition-property: border-color, background-color, translate, scale;
+    transition-duration: 0.14s;
+}
+
+.mode-card:hover {
+    border-color: var(--stroke-accent);
+    background-color: rgba(16, 28, 40, 0.97);
+    translate: 3px 0;
+    scale: 1 1;
+}
+
+.mode-card--disabled {
+    opacity: 0.55;
+}
+
+.mode-card-icon-wrap {
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgba(62, 242, 207, 0.07);
+    border-width: 1px;
+    border-color: rgba(62, 242, 207, 0.22);
+}
+
+.card-icon {
+    margin-bottom: 0;
+    font-size: 0;
+}
+
+.card-icon--image {
+    width: 56px;
+    height: 56px;
+    background-size: 168%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.mode-card-text {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 1px;
+}
+
+.mode-card .card-title {
+    font-size: 19px;
+    margin-bottom: 4px;
+    -unity-text-align: middle-left;
+    letter-spacing: 0.3px;
+}
+
+.mode-card .card-description {
+    font-size: 13px;
+    -unity-text-align: middle-left;
+}
+
+.mode-card-chevron {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-right-color: var(--color-accent);
+    border-top-color: var(--color-accent);
+    rotate: 45deg;
+    opacity: 0.45;
+    margin-right: 6px;
+    transition-property: opacity, translate;
+    transition-duration: 0.14s;
+}
+
+.mode-card:hover .mode-card-chevron {
+    opacity: 1;
+    translate: 3px 0;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Character select
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-rps-character-select {
+    --content-padding-x: 22;
+    --content-padding-y: 18;
+}
+
+.screen-rps-character-select .screen-header {
+    margin-bottom: 10px;
+}
+
+.screen-rps-character-select .rps-menu-subtitle {
+    margin-bottom: 0;
+    -unity-text-align: middle-center;
+    letter-spacing: 1.6px;
+    font-size: 13px;
+}
+
+.charselect-turn {
+    font-size: 19px;
+    color: var(--color-accent);
+    letter-spacing: 0.8px;
+    margin: 6px 0 2px 0;
+}
+
+.charselect-score {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    letter-spacing: 2px;
+    margin: 2px 0 8px 0;
+}
+
+.charselect-character-row {
+    margin: 8px 0;
+    max-width: 680px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.charselect-character-card {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 0;
+    min-width: 140px;
+    max-width: 200px;
+    min-height: 188px;
+    flex-shrink: 0;
+    padding: 10px 10px 12px 10px;
+    margin: 0 7px;
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    border-radius: var(--radius-lg);
+    background-color: rgba(9, 16, 24, 0.92);
+    background-size: 100% 100%;
+    overflow: hidden;
+    transition-property: border-color, background-color, translate, scale;
+    transition-duration: 0.14s;
+    cursor: link;
+}
+
+.charselect-character-card:hover {
+    border-color: var(--stroke-accent);
+    background-color: rgba(16, 28, 40, 0.97);
+    translate: 0 -3px;
+    scale: 1 1;
+}
+
+.charselect-character-card:active {
+    scale: 0.98 0.98;
+}
+
+.charselect-card-aura {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_glow.png");
+    background-size: 118% 118%;
+    background-position-x: center;
+    background-position-y: 28%;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+    opacity: 0.13;
+    transition-property: opacity;
+    transition-duration: 0.16s;
+}
+
+.charselect-character-card:hover .charselect-card-aura {
+    opacity: 0.30;
+}
+
+.charselect-card-frame {
+    width: 100%;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background-color: rgba(4, 9, 14, 0.34);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    overflow: hidden;
+}
+
+.charselect-character-sprite {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 0;
+    background-size: 112%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    transition-property: scale;
+    transition-duration: 0.16s;
+}
+
+.charselect-character-card:hover .charselect-character-sprite {
+    scale: 1.07 1.07;
+}
+
+.charselect-card-divider {
+    width: 34px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--color-accent);
+    opacity: 0.8;
+    margin: 9px 0 7px 0;
+}
+
+.charselect-character-name {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * VS screen
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-rps-vs {
+    --content-padding-x: 22;
+    --content-padding-y: 18;
+}
+
+.vs-round-label {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    letter-spacing: 3px;
+    margin-bottom: 2px;
+}
+
+.vs-score-label {
+    font-size: 19px;
+    letter-spacing: 1.2px;
+    margin-bottom: 6px;
+}
+
+.vs-stage {
+    align-items: center;
+}
+
+.vs-side {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 140px;
+    max-width: 300px;
+    flex-shrink: 1;
+    margin: 0 5px;
+}
+
+.vs-aura {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 30px;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_glow.png");
+    background-size: 100% 100%;
+    background-position-x: center;
+    background-position-y: center;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+    opacity: 0.20;
+}
+
+.vs-side--right .vs-aura {
+    -unity-background-image-tint-color: rgb(154, 123, 255);
+    opacity: 0.20;
+}
+
+.vs-portrait {
+    width: 100%;
+    height: 172px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    background-color: rgba(4, 9, 14, 0.30);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.vs-side--left .vs-portrait {
+    border-color: rgba(62, 242, 207, 0.35);
+}
+
+.vs-side--right .vs-portrait {
+    border-color: rgba(154, 123, 255, 0.35);
+}
+
+.vs-sprite {
+    width: 168px;
+    height: 168px;
+    margin-bottom: 0;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+.vs-name {
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    margin: 0;
+}
+
+.vs-badge {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent);
+    color: var(--ink-on-accent);
+    font-size: 18px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    border-width: 4px;
+    border-color: rgba(5, 8, 13, 0.9);
+    align-self: center;
+    margin: 0 4px;
+}
+
+.vs-draw-label {
+    width: auto;
+    max-width: 720px;
+    align-self: center;
+    font-size: 26px;
+    color: var(--color-warning);
+    background-color: rgba(5, 10, 16, 0.78);
+    border-width: 1px;
+    border-color: rgba(255, 196, 92, 0.45);
+    border-radius: var(--radius-pill);
+    padding: 5px 24px;
+    margin: 2px 0 0 0;
+}
+
+.vs-series-label {
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    margin-top: 6px;
+}
+
+.vs-button-row {
+    margin-top: 14px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Duel hub
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-duel-hub {
+    --content-padding-x: 22;
+    --content-padding-y: 20;
+}
+
+.screen-duel-hub .screen-header {
+    max-width: 560px;
+}
+
+.duel-empty-icon {
+    width: 66px;
+    height: 66px;
+    flex-shrink: 0;
+    margin-top: 26px;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_duel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+    opacity: 0.35;
+}
+
+.duel-empty-label {
+    max-width: 440px;
+    margin: 14px 0 22px 0;
+}
+
+.duel-hub-list {
+    max-width: 560px;
+}
+
+.duel-hub-list .duel-card {
+    min-height: 68px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-left-width: 3px;
+    border-color: var(--stroke-soft);
+    border-left-color: rgba(62, 242, 207, 0.55);
+    border-radius: var(--radius-md);
+    background-color: rgba(9, 16, 24, 0.92);
+    background-size: 100% 100%;
+    transition-property: border-color, background-color, translate;
+    transition-duration: 0.14s;
+}
+
+.duel-hub-list .duel-card:hover {
+    border-color: var(--stroke-mid);
+    border-left-color: var(--color-accent);
+    background-color: rgba(16, 28, 40, 0.97);
+    translate: 3px 0;
+}
+
+.duel-card-name {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+}
+
+.duel-card-summary {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.duel-card-state {
+    font-size: 10px;
+    letter-spacing: 0.4px;
+    padding: 5px 11px;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.duel-card-text {
+    margin-right: 4px;
+}
+
+.duel-card-chevron {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-right-color: var(--color-accent);
+    border-top-color: var(--color-accent);
+    rotate: 45deg;
+    opacity: 0.5;
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.duel-hub-list .duel-card:hover .duel-card-chevron {
+    opacity: 1;
+}
+
+#duel-hub-new-button {
+    margin-top: 12px;
+    min-width: 280px;
+}
+
+#duel-hub-idle-button {
+    font-size: 12px;
+    padding: 8px 16px;
+    margin-top: 6px;
+    opacity: 0.75;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Duel combat
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-duel {
+    --content-padding-x: 18;
+    --content-padding-y: 16;
+}
+
+.screen-duel .screen-header {
+    width: 100%;
+    max-width: 680px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+}
+
+.duel-scroll {
+    width: 100%;
+    max-width: 680px;
+    flex-grow: 1;
+}
+
+.duel-scroll .unity-scroll-view__content-container {
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.duel-stage {
+    margin-top: 4px;
+    align-items: flex-start;
+}
+
+.duel-side {
+    margin: 0 5px;
+    padding: 10px 10px 8px 10px;
+    border-radius: var(--radius-md);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    background-color: rgba(9, 16, 24, 0.55);
+    background-size: 100% 100%;
+}
+
+.duel-side--you {
+    border-color: rgba(62, 242, 207, 0.28);
+}
+
+.duel-side--rival {
+    border-color: rgba(255, 93, 108, 0.24);
+}
+
+.duel-sprite {
+    width: 92px;
+    height: 92px;
+    flex-shrink: 0;
+    margin-bottom: 2px;
+}
+
+/* Watermark behind a fighter portrait while that class is still hidden. */
+.duel-sprite-placeholder {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_duel.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+    opacity: 0.10;
+}
+
+.duel-side--rival .duel-sprite-placeholder {
+    -unity-background-image-tint-color: rgb(255, 93, 108);
+}
+
+.duel-name {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.duel-hp-track {
+    height: 10px;
+    background-color: rgba(3, 8, 12, 0.85);
+    border-width: 1px;
+    border-color: rgba(126, 167, 190, 0.16);
+    border-radius: 5px;
+}
+
+.duel-hp-fill {
+    border-radius: 5px;
+}
+
+.duel-hp-fill {
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_sheen.png");
+    background-size: 100% 100%;
+}
+
+.duel-hp-fill--rival {
+    background-color: var(--color-danger);
+}
+
+.duel-hp-tick {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: rgba(4, 9, 14, 0.55);
+}
+
+.duel-hp-label {
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    margin-top: 4px;
+}
+
+.duel-vs-label {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: var(--radius-pill);
+    background-color: rgba(20, 33, 48, 0.92);
+    border-width: 1px;
+    border-color: var(--stroke-mid);
+    color: var(--color-text-muted);
+    font-size: 13px;
+    margin-top: 34px;
+}
+
+.duel-status {
+    max-width: 560px;
+    font-size: 13px;
+    margin: 10px 0 0 0;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    border-width: 1px;
+    border-color: rgba(62, 242, 207, 0.24);
+    background-color: rgba(62, 242, 207, 0.07);
+}
+
+.duel-countdown {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    margin-top: 5px;
+}
+
+.duel-slot-row {
+    max-width: 560px;
+    margin-top: 12px;
+}
+
+.duel-slot {
+    max-width: none;
+    height: 50px;
+    margin: 0 5px;
+    border-radius: var(--radius-sm);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    background-color: rgba(9, 16, 24, 0.92);
+    background-size: 100% 100%;
+    font-size: 12px;
+    transition-property: border-color, background-color;
+    transition-duration: 0.12s;
+}
+
+.duel-slot:hover {
+    border-color: var(--stroke-mid);
+}
+
+.duel-slot--filled {
+    border-color: var(--stroke-violet);
+    background-color: rgba(154, 123, 255, 0.12);
+}
+
+.duel-slot--locked {
+    opacity: 0.6;
+}
+
+.duel-slot-row--rival {
+    max-width: 230px;
+    margin-top: 6px;
+}
+
+.duel-slot--rival {
+    height: 26px;
+    border-radius: 7px;
+    font-size: 9px;
+    margin: 0 2px;
+}
+
+.duel-picker-row {
+    max-width: 560px;
+    margin-top: 12px;
+}
+
+.duel-pick {
+    max-width: 170px;
+    min-height: 104px;
+    margin: 0 5px;
+    padding: 8px 6px 9px 6px;
+    border-radius: var(--radius-md);
+    border-width: 1px;
+    border-color: var(--stroke-soft);
+    background-color: rgba(9, 16, 24, 0.92);
+    background-size: 100% 100%;
+    transition-property: border-color, background-color, translate;
+    transition-duration: 0.13s;
+}
+
+.duel-pick:hover {
+    border-color: var(--stroke-accent);
+    background-color: rgba(16, 28, 40, 0.97);
+    translate: 0 -2px;
+}
+
+.duel-pick-icon {
+    font-size: 22px;
+    color: var(--color-accent);
+}
+
+.duel-pick-icon--art {
+    width: 62px;
+    height: 62px;
+    font-size: 0;
+    color: rgba(0, 0, 0, 0);
+    background-size: 112%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    margin-bottom: 2px;
+}
+
+.duel-pick-label {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+.duel-confirm {
+    margin-top: 6px;
+    min-width: 260px;
+    align-self: center;
+}
+
+.screen-duel .danger-button {
+    margin-top: 8px;
+    width: auto;
+    max-width: 320px;
+    align-self: center;
+}
+
+.duel-result-panel {
+    border-width: 1px;
+    border-color: var(--stroke-mid);
+    border-radius: var(--radius-lg);
+    background-color: var(--surface-glass-strong);
+    background-size: 100% 100%;
+    padding: 22px;
+}
+
+.duel-result-panel .screen-title {
+    font-size: 24px;
+    color: var(--color-accent);
+}
+
+.duel-clash-row {
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+    margin-bottom: 7px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Store
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-store {
+    --content-padding-x: 22;
+    --content-padding-y: 20;
+}
+
+.screen-store .screen-header {
+    max-width: 560px;
+}
+
+.store-content {
+    max-width: 560px;
+}
+
+.grid-2col {
+    max-width: 560px;
+    justify-content: space-between;
+}
+
+.store-item-card {
+    width: 48%;
+    margin: 0 0 8px 0;
+    padding: 18px 12px;
+    border-radius: var(--radius-lg);
+    min-height: 156px;
+    transition-property: border-color, background-color, translate;
+    transition-duration: 0.14s;
+}
+
+.store-item-card:hover {
+    border-color: var(--stroke-mid);
+    background-color: rgba(16, 28, 40, 0.97);
+    translate: 0 -2px;
+}
+
+.store-item-card-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    font-size: 0;
+    color: rgba(0, 0, 0, 0);
+    margin-bottom: 10px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(62, 242, 207, 0.08);
+    border-width: 1px;
+    border-color: rgba(62, 242, 207, 0.20);
+    background-image: url("/Assets/Art/Generated/brand-ui/ui_icon_store.png");
+    background-size: 56%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    -unity-background-image-tint-color: rgb(62, 242, 207);
+}
+
+.store-item-card-title {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.store-item-card-description {
+    font-size: 11px;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Settings + runtime fields (Slider, DropdownField, Toggle)
+ * ------------------------------------------------------------------------------------------- */
+
+.screen-settings {
+    --content-padding-x: 22;
+    --content-padding-y: 20;
+}
+
+.settings-content {
+    max-width: 560px;
+}
+
+.settings-card {
+    margin-bottom: 12px;
+    padding: 16px 16px 14px 16px;
+}
+
+.settings-note {
+    font-size: 11px;
+}
+
+.settings-slider {
+    margin-bottom: 16px;
+}
+
+.settings-toggle {
+    margin-top: 6px;
+}
+
+/* Dropdown: style the closed field; the popup lives in its own panel. */
+.settings-dropdown {
+    margin-bottom: 6px;
+}
+
+.settings-dropdown .unity-base-popup-field__input {
+    background-color: rgba(5, 10, 16, 0.72);
+    border-width: 1px;
+    border-color: var(--stroke-mid);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    font-size: 14px;
+    padding: 9px 12px;
+    min-height: 38px;
+}
+
+.settings-dropdown .unity-base-popup-field__input:hover {
+    border-color: var(--stroke-accent);
+}
+
+.settings-dropdown .unity-base-popup-field__label {
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.settings-dropdown .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: var(--color-accent);
+}
+
+/* Slider: thin rail, round accent thumb. */
+.settings-slider .unity-base-slider__tracker {
+    height: 6px;
+    background-color: rgba(126, 167, 190, 0.24);
+    border-width: 0;
+    border-radius: var(--radius-pill);
+}
+
+.settings-slider .unity-base-slider__tracker:hover {
+    background-color: rgba(126, 167, 190, 0.36);
+}
+
+.settings-slider .unity-base-slider__dragger {
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-accent);
+    border-width: 2px;
+    border-color: #05110d;
+    border-radius: var(--radius-pill);
+    margin-top: -5px;
+}
+
+.settings-slider .unity-base-slider__dragger:hover {
+    background-color: #6dffe6;
+}
+
+.settings-slider .unity-base-slider__dragger-border {
+    width: 16px;
+    height: 16px;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: -5px;
+}
+
+/* Toggle: square glass check with an accent fill when on. */
+.settings-toggle .unity-toggle__checkmark {
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    background-color: rgba(5, 10, 16, 0.85);
+    border-width: 1px;
+    border-color: var(--stroke-mid);
+    margin-right: 10px;
+}
+
+.settings-toggle .unity-toggle__checkmark:hover {
+    border-color: var(--stroke-accent);
+}
+
+.settings-toggle:checked .unity-toggle__checkmark {
+    background-color: rgba(62, 242, 207, 0.20);
+    border-color: var(--color-accent);
+}
+
+.settings-toggle .unity-toggle__label {
+    color: var(--color-text);
+    font-size: 13px;
+    white-space: normal;
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Overlays, dialogs, toast, scrollbars
+ * ------------------------------------------------------------------------------------------- */
+
+.overlay {
+    background-color: rgba(3, 6, 10, 0.88);
+}
+
+.pause-panel,
+.confirm-dialog-panel {
+    border-width: 1px;
+    border-color: var(--stroke-mid);
+    border-radius: var(--radius-lg);
+    background-color: var(--surface-glass-strong);
+    background-size: 100% 100%;
+    padding: 24px;
+}
+
+.confirm-dialog-message {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.toast-label {
+    background-color: rgba(14, 23, 33, 0.96);
+    border-width: 1px;
+    border-color: var(--stroke-accent);
+    color: var(--color-text);
+    font-size: 13px;
+    padding: 11px 22px;
+}
+
+.unity-scroll-view__vertical-scroller {
+    width: 5px;
+}
+
+.unity-scroll-view__vertical-scroller .unity-base-slider__dragger {
+    width: 4px;
+    background-color: rgba(126, 167, 190, 0.12);
+    border-radius: var(--radius-pill);
+}
+
+.unity-scroll-view__vertical-scroller .unity-base-slider__dragger:hover {
+    background-color: var(--color-accent);
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Small screens (portrait phones and short landscape windows)
+ * ------------------------------------------------------------------------------------------- */
+
+@media (max-height: 560px) {
+    .menu-emblem {
+        width: 72px;
+        height: 72px;
+    }
+
+    .menu-emblem-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .screen-rps-menu .screen-title {
+        font-size: 36px;
+    }
+
+    .menu-cta-wrap {
+        margin-top: 12px;
+    }
+
+    .home-secondary-row {
+        margin-top: 8px;
+    }
+
+    .secondary-nav-button {
+        padding: 9px 8px;
+    }
+
+    .secondary-nav-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 5px;
+    }
+
+    .charselect-card-frame {
+        height: 112px;
+    }
+
+    .charselect-character-sprite {
+        width: 108px;
+        height: 108px;
+    }
+
+    .vs-portrait {
+        height: 148px;
+    }
+
+    .vs-sprite {
+        width: 144px;
+        height: 144px;
+    }
+
+    .duel-pick {
+        min-height: 92px;
+    }
+
+    .duel-pick-icon--art {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+@media (max-width: 420px) {
+    .charselect-character-card {
+        min-width: 104px;
+        margin: 0 4px;
+    }
+
+    .charselect-character-name {
+        font-size: 14px;
+    }
+}
